@@ -1,7 +1,7 @@
 package bean;
 
-public class Hello {
-	public Hello() {
+public class Pojo {
+	public Pojo() {
 		System.out.println("Hello World");
 	}	
 }
