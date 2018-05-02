@@ -1,14 +1,13 @@
 package test;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import bean.Student;
-import config.AppConfig;
 
 public class Test {
 	public static void main(String[] args) {
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("resources/spring-annotation.xml");
 		Student student = appContext.getBean("student", Student.class);
 		student.setName("Shivam");
 		student.greet();

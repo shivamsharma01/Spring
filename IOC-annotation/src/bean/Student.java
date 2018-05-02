@@ -1,5 +1,10 @@
 package bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("student")
 public class Student {
 	private String gender;
 	private String name;
@@ -8,7 +13,8 @@ public class Student {
 	public Student() {
 		System.out.println("Student instance created");
 	}
-	
+
+	@Value("Mr.")
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
@@ -21,6 +27,7 @@ public class Student {
 		return book;
 	}
 
+	@Autowired
 	public void setBook(Book book) {
 		this.book = book;
 	}
