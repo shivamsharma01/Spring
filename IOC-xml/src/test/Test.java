@@ -11,5 +11,6 @@ public class Test {
 		Student student = (Student)appContext.getBean("t");
 		student.setName("Shivam");
 		student.greet();
+		student.getBook().bookDetails();
 	}
 }

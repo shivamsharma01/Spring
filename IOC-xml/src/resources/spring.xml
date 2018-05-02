@@ -3,5 +3,12 @@
 <beans>
 	<bean class="bean.Student" id="t">
 	<property name="gender" value="Mr."></property>
+	<property name="book">
+		<ref bean="b"/>
+	</property>
+	</bean>
+	<bean class ="bean.Book" id="b">
+	<constructor-arg value="Pro Spring 5"></constructor-arg>
+	<constructor-arg value="Iuliana Cosmina"></constructor-arg>
 	</bean>
 </beans>
