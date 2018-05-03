@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+	<bean id="restaurant" class="beans.Restaurant">
+		<property name="ourLocations">
+			<util:list list-class="java.util.Vector">
+				<value>1. Delhi</value>
+				<value>2. Pune</value>
+				<value>3. Dehradun</value>
+				<value>4. Mangalore</value>
+				<value>5. Bangalore</value>
+			</util:list>
+		</property>
+		<property name="menu">
+			<util:set set-class="java.util.TreeSet">
+				<value>1. Spring Roll</value>
+				<value>2. Paneer Tikka</value>
+				<value>3. Veg. Platter</value>
+				<value>4. Malai Kofta</value>
+				<value>5. Paneer Butter Masala</value>
+			</util:set>
+		</property>
+		<property name="price">
+			<util:map map-class="java.util.Hashtable">
+				<entry key="Spring Roll">
+					<value type="int">130</value>
+				</entry>
+				<entry key="Paneer Tikka">
+					<value type="int">140</value>
+				</entry>
+				<entry key="Veg. Platter">
+					<value type="int">140</value>
+				</entry>
+				<entry key="Malai Kofta">
+					<value type="int">150</value>
+				</entry>
+				<entry key="Paneer Butter Masala">
+					<value type="int">170</value>
+				</entry>
+			</util:map>
+		</property>
+	</bean>
+</beans>
