@@ -16,4 +16,9 @@ public class Connection {
 	public String getValue(String key) {
 		return this.property.getProperty(key);
 	}
+	public void printProperties() {
+		for(Object key: this.property.keySet()) {
+			System.out.println("Key: "+key+" Value: "+this.property.getProperty((String) key));
+		}
+	}
 }

@@ -9,8 +9,6 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("resources/properties.xml");
 		Connection connection = appContext.getBean("connection", Connection.class);
-		System.out.println(connection.getValue("username"));
-		System.out.println(connection.getValue("password"));
-		System.out.println(connection.getValue("email"));
+		connection.printProperties();
 	}
 }
