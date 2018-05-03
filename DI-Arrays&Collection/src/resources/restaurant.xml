@@ -1,0 +1,34 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="restaurant" class="beans.Restaurant">
+		<property name="menu">
+			<set>
+				<value>1. Spring Roll</value>
+				<value>2. Paneer Tikka</value>
+				<value>3. Veg. Platter</value>
+				<value>4. Malai Kofta</value>
+				<value>5. Paneer Butter Masala</value>
+			</set>
+		</property>
+		<property name="price">
+			<map>
+				<entry key="Spring Roll">
+					<value type="int">130</value>
+				</entry>
+				<entry key="Paneer Tikka">
+					<value type="int">140</value>
+				</entry>
+				<entry key="Veg. Platter">
+					<value type="int">140</value>
+				</entry>
+				<entry key="Malai Kofta">
+					<value type="int">150</value>
+				</entry>
+				<entry key="Paneer Butter Masala">
+					<value type="int">170</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>
