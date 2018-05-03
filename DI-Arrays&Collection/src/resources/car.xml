@@ -1,0 +1,29 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="car" class="beans.Car">
+		<property name="name" value="Audi R8 Coupe"></property>
+		<property name="engine" ref="engine"></property>
+		<property name="features">
+			<list>
+				<value>1. lightweight aluminium space frame</value>
+				<value>2. 6.71 Kmpl mileage</value>
+				<value>3. 6-speed, Manual, 4WD / AWD</value>
+			</list>
+		</property>
+		<property name="availableColors">
+			<list>
+				<value>1. vegas-yellow</value>
+				<value>2. ibis-white</value>
+				<value>3. dynamite-red</value>
+				<value>4. floret-silver</value>
+				<value>5. camouflage-green</value>
+				<value>6. daytona-grey</value>
+				<value>7. suzuka-grey</value>
+				<value>8. mythos-black</value>
+				<value>9. tango-red</value>
+				<value>9. macaw-blue</value>
+			</list>
+		</property>
+	</bean>
+</beans>
