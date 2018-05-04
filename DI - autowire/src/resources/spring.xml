@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+    <bean id="car1" class="beans.Car" autowire="byType" p:name="Audi"></bean>
+	<bean id="car2" class="beans.Car" autowire="byName" p:name="BMW"></bean>
+	<bean id="car3" class="beans.Car" autowire="constructor" c:name="BMW"></bean>
+	<bean id="engine" class="beans.Engine" c:name="V10" autowire-candidate="false"></bean>
+	<bean id="e2" class="beans.Engine" c:name="V8"></bean>
+</beans>
