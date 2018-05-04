@@ -1,13 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework.org/schema/c"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
-    <bean id="car1" class="beans.Car" autowire="byType" p:name="Audi"></bean>
-	<bean id="car2" class="beans.Car" autowire="byName" p:name="BMW"></bean>
-	<bean id="car3" class="beans.Car" autowire="constructor" c:name="BMW"></bean>
-	<bean id="engine" class="beans.Engine" c:name="V10" autowire-candidate="false"></bean>
-	<bean id="e2" class="beans.Engine" c:name="V8"></bean>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byType">
+    <bean id="car1" class="beans.Car" autowire="byType">
+		<property name="name" value="Audi"></property>
+    </bean>
+	<bean id="car2" class="beans.Car" autowire="byName">
+		<property name="name" value="BMW"></property>
+	</bean>
+	<bean id="car3" class="beans.Car" autowire="autodetect">
+		<!-- <property name="name" value="Jaguar"></property> -->
+	</bean>
+	<bean id="bus1" class="beans.Bus" autowire="constructor">
+	</bean>
+	<bean id="bus2" class="beans.Bus" autowire="autodetect">
+	</bean>
+	<bean id="engine" class="beans.Engine" autowire-candidate="false">
+		<property name="name" value="V8"></property>
+	</bean>
+	<bean id="e2" class="beans.Engine">
+		<property name="name" value="V10"></property>
+	</bean>
 </beans>

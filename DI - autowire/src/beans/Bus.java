@@ -2,25 +2,27 @@ package beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Car {
+public class Bus {
 	private String name;
 	private Engine engine;
-	
-	public String getName() {
-		return name;
+
+	@Autowired
+	public Bus(Engine engine) {
+		System.out.println("Parameterized Bus constructor");
+		this.engine = engine;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public Engine getEngine() {
 		return engine;
 	}
-	@Autowired
+
 	public void setEngine(Engine engine) {
+		System.out.println("Bus Engine Setter");
 		this.engine = engine;
 	}
 	@Override
 	public String toString() {
-		return "Car Name : "+this.name +this.engine;
+		return "Bus Name : "+this.name +this.engine;
 	}	
+
 }
